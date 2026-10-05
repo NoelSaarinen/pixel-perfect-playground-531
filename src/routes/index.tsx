@@ -59,13 +59,13 @@ function Index() {
         <section className="space-y-6 rounded-lg border border-border bg-card p-5">
           <h2 className="text-xs uppercase tracking-widest text-muted-foreground">Parameters</h2>
           <Param label="Initial Plastic Mass" value={`${params.initialPlastic} g`} icon={<Box className="h-4 w-4" />}>
-            <Slider min={10} max={1000} step={10} value={[params.initialPlastic]} onValueChange={([v]) => setParams((p) => ({ ...p, initialPlastic: v }))} />
+            <Slider min={10} max={1000} step={10} value={[params.initialPlastic]} onValueChange={(vals) => setParams((p) => ({ ...p, initialPlastic: vals[0] ?? p.initialPlastic }))} />
           </Param>
           <Param label="Initial Bacterial Biomass" value={`${params.initialBiomass.toFixed(1)} g`} icon={<Bug className="h-4 w-4" />}>
-            <Slider min={0.1} max={10} step={0.1} value={[params.initialBiomass]} onValueChange={([v]) => setParams((p) => ({ ...p, initialBiomass: v }))} />
+            <Slider min={0.1} max={10} step={0.1} value={[params.initialBiomass]} onValueChange={(vals) => setParams((p) => ({ ...p, initialBiomass: vals[0] ?? p.initialBiomass }))} />
           </Param>
           <Param label="Temperature" value={`${params.temperature} °C`} icon={<Thermometer className="h-4 w-4" />}>
-            <Slider min={10} max={50} step={1} value={[params.temperature]} onValueChange={([v]) => setParams((p) => ({ ...p, temperature: v }))} />
+            <Slider min={10} max={50} step={1} value={[params.temperature]} onValueChange={(vals) => setParams((p) => ({ ...p, temperature: vals[0] ?? p.temperature }))} />
           </Param>
           <div className="space-y-1 rounded-md bg-muted p-3 text-xs text-muted-foreground">
             <div>T_f = <span className="text-foreground">{Tf.toFixed(3)}</span></div>
