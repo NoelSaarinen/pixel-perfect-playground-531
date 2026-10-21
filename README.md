@@ -1,26 +1,15 @@
-# Pixel Perfect Playground
+# PET-Degradation Simulation Engine
 
-Implement exactly the screenshot and nothing else
+## What is this?
 
-This project was built with [Lovable](https://lovable.dev).
+This is a scientifically accurate synthetic biology web simulation. It visually demonstrates the biochemical kinetics of genetically engineered bacteria degrading PET plastic into water, bacterial biomass, and CO2.
 
-**Live app**: https://pixel-perfect-playground-531.lovable.app
+The goal of this project is to model real-world enzymatic degradation (utilizing PETase and MHETase pathways) using deterministic mathematical equations and strict stoichiometry, providing a theoretically viable framework that bridges the gap between digital prototyping and physical execution.
 
-## Build with Lovable
+## How to Use the Application
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/b91f1923-d4c5-40d9-9964-56cb40ae17fb).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+1. **Set Initial Parameters:** Adjust the starting sliders for Plastic Mass, initial Bacterial Biomass, and environmental Temperature.
+2. **Start the Simulation:** Initiate the biological degradation loop to activate the enzyme kinetics.
+3. **Observe Visual Degradation:** Watch the central visualizer as the polymer network shrinks and the bacterial colony grows in real-time based on the exact mass state.
+4. **Track Mass Balance:** Monitor the live scientific dashboard and charts to see the precise stoichiometric conversion of plastic into H2O and CO2.
+5. **Test Kinetic Constraints:** Alter the temperature dynamically during the run to observe its immediate impact on Michaelis-Menten enzyme efficiency and overall degradation speed.
